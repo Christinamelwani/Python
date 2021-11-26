@@ -7,8 +7,8 @@ def main():
     username = input("Please enter your username: ")
     password = input(f"Hello, {username}\nPlease enter your password: ")
     password = validate(password)
-    password = "*" * len(password)
-    confirmation = input(f"{username}, your password is {password}\nDoes this look correct? (yes/no) ")
+    obscured_password = "*" * len(password)
+    confirmation = input(f"{username}, your password is {obscured_password}\nDoes this look correct? (yes/no) ")
     if confirmation.upper() == "YES":
       print("Password succesfully set.")
     else:
